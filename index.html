@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDINA | City Survival: Language Quest</title>
+    <meta name="description" content="IDINA: El videojuego donde aprender idiomas es cuestión de supervivencia. Explora ciudades 3D, habla con NPCs y domina nuevos idiomas jugando.">
+    <meta property="og:title" content="IDINA | City Survival: Language Quest">
+    <meta property="og:description" content="Sumérgete en ciudades extranjeras. Aprende idiomas para sobrevivir. Vive la aventura más inmersiva jamás creada.">
+    <meta property="og:image" content="https://idina.com/og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://idina.com/">
+    <meta itemprop="name" content="IDINA">
+    <meta itemprop="description" content="El único juego donde aprender idiomas es cuestión de supervivencia.">
+    <meta itemprop="image" content="https://idina.com/og-image.jpg">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navbar__logo">IDINA</div>
+        <nav class="navbar__menu" id="navbarMenu">
+            <a href="#game" class="navbar__link">Game</a>
+            <a href="#cities" class="navbar__link">Cities</a>
+            <a href="#features" class="navbar__link">Features</a>
+            <a href="#download" class="navbar__link">Download</a>
+            <a href="#community" class="navbar__link">Community</a>
+        </nav>
+        <button class="navbar__toggle" id="navbarToggle" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero__bg">
+            <video autoplay muted loop playsinline poster="assets/hero-city.jpg" class="hero__video" id="heroVideo">
+                <source src="assets/hero-city.mp4" type="video/mp4">
+                <img src="assets/hero-city.jpg" alt="Ciudad futurista 3D" loading="lazy">
+            </video>
+            <canvas id="heroParticles"></canvas>
+        </div>
+        <div class="hero__content">
+            <h1 class="hero__title">City Survival: Language Quest</h1>
+            <p class="hero__subtitle">El único juego donde aprender idiomas es cuestión de supervivencia</p>
+            <div class="hero__cta">
+                <a href="#download" class="btn btn--primary btn--glow">JUGAR GRATIS AHORA</a>
+                <a href="#demo" class="btn btn--secondary">VER DEMO</a>
+            </div>
+            <div class="hero__trust">
+                <span>Más de <span class="counter" data-count="10000">0</span> jugadores en beta</span>
+                <span>Desarrollado por expertos en gaming e idiomas</span>
+                <span>Disponible en 4 idiomas principales</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Features Section -->
+    <section class="features" id="features">
+        <h2 class="section-title neon-gradient">Mecánicas Revolucionarias</h2>
+        <div class="features__grid">
+            <div class="feature-card glassmorphism fade-in">
+                <img src="assets/icon-survival.svg" alt="Supervivencia Lingüística" class="feature-card__icon" loading="lazy">
+                <h3>Supervivencia Lingüística</h3>
+                <p>Barra de Comprensión que disminuye gradualmente</p>
+            </div>
+            <div class="feature-card glassmorphism fade-in">
+                <img src="assets/icon-voice.svg" alt="Reconocimiento de Voz" class="feature-card__icon" loading="lazy">
+                <h3>Reconocimiento de Voz</h3>
+                <p>Habla real con NPCs usando tu micrófono</p>
+            </div>
+            <div class="feature-card glassmorphism fade-in">
+                <img src="assets/icon-3d.svg" alt="Mundo 3D Inmersivo" class="feature-card__icon" loading="lazy">
+                <h3>Mundo 3D Inmersivo</h3>
+                <p>Ciudades 3D fotorrealistas y culturalmente auténticas</p>
+            </div>
+            <div class="feature-card glassmorphism fade-in">
+                <img src="assets/icon-gamified.svg" alt="Progreso Gamificado" class="feature-card__icon" loading="lazy">
+                <h3>Progreso Gamificado</h3>
+                <p>Sistema de logros y rankings globales</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Cities Section -->
+    <section class="cities" id="cities">
+        <h2 class="section-title neon-gradient">Explora Ciudades Únicas</h2>
+        <div class="cities__carousel" id="citiesCarousel">
+            <button class="carousel__control carousel__control--prev" aria-label="Anterior">&#10094;</button>
+            <div class="cities__cards">
+                <div class="city-card glassmorphism slide-up">
+                    <img src="assets/neo-tokyo.jpg" alt="Neo-Tokyo" class="city-card__img" loading="lazy">
+                    <h3>Neo-Tokyo</h3>
+                    <span class="city-card__lang">Japonés</span>
+                    <p>Ambiente cyberpunk</p>
+                </div>
+                <div class="city-card glassmorphism slide-up">
+                    <img src="assets/barceloneta.jpg" alt="Barceloneta" class="city-card__img" loading="lazy">
+                    <h3>Barceloneta</h3>
+                    <span class="city-card__lang">Español</span>
+                    <p>Ciudad costera</p>
+                </div>
+                <div class="city-card glassmorphism slide-up">
+                    <img src="assets/little-london.jpg" alt="Little London" class="city-card__img" loading="lazy">
+                    <h3>Little London</h3>
+                    <span class="city-card__lang">Inglés</span>
+                    <p>Metrópolis victoriana</p>
+                </div>
+                <div class="city-card glassmorphism slide-up">
+                    <img src="assets/cafe-paris.jpg" alt="Café Paris" class="city-card__img" loading="lazy">
+                    <h3>Café Paris</h3>
+                    <span class="city-card__lang">Francés</span>
+                    <p>Ciudad bohemia</p>
+                </div>
+            </div>
+            <button class="carousel__control carousel__control--next" aria-label="Siguiente">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="download">
+        <h2 class="section-title neon-gradient">Comienza tu Aventura</h2>
+        <div class="pricing__calculator">
+            <div class="pricing__plans">
+                <div class="plan-card glassmorphism scale-in" data-plan="free">
+                    <h3>GRATIS</h3>
+                    <p>2 horas diarias<br>1 ciudad</p>
+                    <span class="plan-card__price">€0</span>
+                    <button class="btn btn--primary btn--select">JUGAR GRATIS</button>
+                </div>
+                <div class="plan-card glassmorphism scale-in" data-plan="premium">
+                    <h3>PREMIUM</h3>
+                    <p>Acceso ilimitado<br>Todas las ciudades</p>
+                    <span class="plan-card__price">€9.99<span>/mes</span></span>
+                    <button class="btn btn--secondary btn--select">DESCARGAR AHORA</button>
+                </div>
+                <div class="plan-card glassmorphism scale-in" data-plan="season">
+                    <h3>SEASON PASS</h3>
+                    <p>Contenido exclusivo<br>Eventos especiales</p>
+                    <span class="plan-card__price">€19.99<span>/temporada</span></span>
+                    <button class="btn btn--accent btn--select">ÚNETE A LA BETA</button>
+                </div>
+            </div>
+            <div class="pricing__compare">
+                <h4>Ahorra hasta <span id="annualSavings">€0</span> al año</h4>
+                <div class="pricing__toggle">
+                    <label>
+                        <input type="radio" name="plan" value="free" checked> Gratis
+                    </label>
+                    <label>
+                        <input type="radio" name="plan" value="premium"> Premium
+                    </label>
+                    <label>
+                        <input type="radio" name="plan" value="season"> Season Pass
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="community">
+        <div class="footer__links">
+            <a href="#about">About</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#terms">Terms</a>
+            <a href="#support">Support</a>
+        </div>
+        <div class="footer__social">
+            <a href="https://discord.gg/idina" target="_blank" aria-label="Discord"><img src="assets/discord.svg" alt="Discord"></a>
+            <a href="https://twitter.com/idinagame" target="_blank" aria-label="Twitter"><img src="assets/twitter.svg" alt="Twitter"></a>
+            <a href="https://youtube.com/idinagame" target="_blank" aria-label="YouTube"><img src="assets/youtube.svg" alt="YouTube"></a>
+            <a href="https://instagram.com/idinagame" target="_blank" aria-label="Instagram"><img src="assets/instagram.svg" alt="Instagram"></a>
+        </div>
+        <div class="footer__copy">
+            © 2024 Idiomas Naturales Gaming S.A
+        </div>
+    </footer>
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "IDINA: City Survival Language Quest",
+        "url": "https://idina.com/",
+        "applicationCategory": "Game",
+        "operatingSystem": "Windows, Mac, Linux",
+        "offers": [
+            {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "EUR",
+                "category": "free"
+            },
+            {
+                "@type": "Offer",
+                "price": "9.99",
+                "priceCurrency": "EUR",
+                "category": "premium"
+            },
+            {
+                "@type": "Offer",
+                "price": "19.99",
+                "priceCurrency": "EUR",
+                "category": "season"
+            }
+        ],
+        "genre": ["Adventure", "Language Learning", "Survival"],
+        "description": "El único juego donde aprender idiomas es cuestión de supervivencia. Explora ciudades 3D, habla con NPCs y domina nuevos idiomas jugando.",
+        "image": "https://idina.com/og-image.jpg",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Idiomas Naturales Gaming S.A"
+        }
+    }
+    </script>
+    <!-- Google Analytics 4 (placeholder) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXX');
+    </script> -->
+</body>
+</html>
